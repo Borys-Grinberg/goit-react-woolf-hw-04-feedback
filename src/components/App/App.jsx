@@ -9,7 +9,10 @@ const App = () => {
   const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
 
   const handleFeedback = type => {
-    setFeedback(prevFeedback => ({ ...prevFeedback, [type]: prevFeedback[type] + 1 }));
+    setFeedback(prevFeedback => ({
+      ...prevFeedback,
+      [type]: prevFeedback[type] + 1,
+    }));
   };
 
   const countTotalFeedback = () => {
@@ -52,8 +55,5 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
-
 
 export default App;
